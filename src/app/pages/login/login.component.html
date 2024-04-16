@@ -1,0 +1,16 @@
+<div class="container">
+    <!-- ojo metodo y name y ngmodel y ngform -->
+        <form (ngSubmit)="logUser(formulario)" #formulario="ngForm"  >
+            <label >ID</label>
+            <input type="text" class="form-control" name="id" [(ngModel)]="id" >
+    
+            <label >Password</label>
+            <input type="text" class="form-control" name="password" [(ngModel)]="password">
+            <br>
+            <button class=" btn btn-primary" type="submit"> Iniciar sesion</button>
+    
+    
+        </form>
+    
+    </div>
+

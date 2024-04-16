@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <h2>Tabla de areas existentes</h2>
+         
+    <table class="table table-striped">
+      <thead>
+        <tr>
+        <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let area of areas">
+          <td>{{area.id}}</td>
+          <td>{{area.nombre}}</td>
+          <td>{{area.descripcion}}</td>
+          <td>
+            <button class="btn btn-primary" [routerLink]="(['/detalles',area.id])">Detalle</button>
+
+            <button (click)="eliminarAreas(area.id)" style="margin-left: 30px;" class="btn btn-primary">Eliminar</button>
+          </td>
+        </tr>
+    
+      </tbody>
+    </table>
+  </div>
+  
